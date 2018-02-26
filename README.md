@@ -12,5 +12,24 @@ $ git clone --recursive https://github.com/Rayckey/v_repExtRosInterface.git
 ```
 $ catkin build
 ```
-5. IMPORTANT! After compiling, copy `libv_repExtRosInterface.so` from `WORKSPACE/devel/lib/` to V-REP root folder, do so whenever the `meta/messages.txt` or `meta/services.txt` files have changed
+5. IMPORTANT! After compiling, copy `libv_repExtRosInterface.so` from `WORKSPACE/devel/lib/` to V-REP root folder, and do so whenever the `meta/messages.txt` or `meta/services.txt` files have changed
+
+
+
+### Dependencies
+1. During catkin build, some packages may need to be installed via apt-get, they include:
+
+
+#Essentials
+```
+$ sudo apt-get install python-catkin-tools python-rosdep python-rosinstall-generator python-wstool python-rosinstall build-essential xsltproc
+```
+#cakin_tools
+```
+$ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu `lsb_release -sc` main" > /etc/apt/sources.list.d/ros-latest.list'
+$ wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
+$ sudo apt-get update
+$ sudo apt-get install python-catkin-tools
+```
+
 # v_repExtRosInterface
